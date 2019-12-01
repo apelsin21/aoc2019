@@ -7,7 +7,6 @@ with open('input.txt') as fp:
     for _, line in enumerate(fp):
         masses.append(float(line))
 
-
 #To get the fuel needed for a given mass, divide the mass by three, round down, and subtract 2.
 def calculate_fuel(mass):
     return max(0, int(mass / 3.0) - 2)
@@ -15,7 +14,6 @@ def calculate_fuel(mass):
 sum=0
 
 for mass in masses:
-    print("Fuel needed for ", mass, " mass = ", calculate_fuel(mass))
     sum+=calculate_fuel(mass)
 
 print(sum)
